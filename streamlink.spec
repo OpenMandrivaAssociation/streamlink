@@ -51,17 +51,12 @@ Streamlink is a fork of the livestreamer project.
 
 %build
 
-python3 setup.py build
-%else
-python2 setup.py build
-%endif
+python setup.py build
 
 %install
-%if 0%{?suse_version} > 1320
-python3 setup.py install \
-%else
-python2 setup.py install \
-%endif
+
+python setup.py install \
+
   --root=%{buildroot} \
   --prefix=%{_prefix}
 
@@ -77,8 +72,4 @@ done
 %license LICENSE
 %doc AUTHORS CHANGELOG.md MANIFEST.in README.md
 %{_bindir}/%{name}
-%if 0%{?suse_version} > 1320
 %{python3_sitelib}/%{name}*/
-%else
-%{python_sitelib}/%{name}*/
-%endif
