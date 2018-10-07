@@ -57,8 +57,6 @@ python setup.py build
 
 python setup.py install \
 
-  --root=%{buildroot} \
-  --prefix=%{_prefix}
 
 #find %{buildroot}{%{python3_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
 #    if [[ "$(head -c2 "$py"; echo)" == "#!" ]]; then
