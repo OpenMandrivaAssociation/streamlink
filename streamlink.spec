@@ -60,13 +60,13 @@ python setup.py install \
   --root=%{buildroot} \
   --prefix=%{_prefix}
 
-find %{buildroot}{%{python3_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
-    if [[ "$(head -c2 "$py"; echo)" == "#!" ]]; then
-        chmod a+x "$py"
-    else
-        chmod a-x "$py"
-    fi
-done
+#find %{buildroot}{%{python3_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
+#    if [[ "$(head -c2 "$py"; echo)" == "#!" ]]; then
+#        chmod a+x "$py"
+#    else
+#        chmod a-x "$py"
+#    fi
+#done
 
 %files
 %license LICENSE
