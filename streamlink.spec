@@ -55,7 +55,7 @@ Streamlink is a fork of the livestreamer project.
 
 %install
 
-python setup.py install \
+%py3_install
 
 
 #find %{buildroot}{%{python3_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
