@@ -26,13 +26,13 @@ Url:            http://streamlink.github.io/
 Source:         https://github.com/streamlink/streamlink/releases/download/%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python3-Sphinx
-BuildRequires:  python3-devel >= 3.4
-BuildRequires:  python3-setuptools
-Requires:       python3-iso-639
-Requires:       python3-iso3166
-Requires:       python3-pycryptodome
-Requires:       python3-requests >= 1.0
+BuildRequires:  python-sphinx
+BuildRequires:  python-devel >= 3.4
+BuildRequires:  python-setuptools
+Requires:       iso-639
+Requires:       iso3166
+Requires:       python-pycryptodome
+Requires:       python-requests >= 1.0
 
 Requires: mpv
 Suggests: vlc
