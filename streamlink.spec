@@ -29,10 +29,12 @@ BuildArch:      noarch
 BuildRequires:  python-sphinx
 BuildRequires:  python-devel >= 3.4
 BuildRequires:  python-setuptools
-Requires:       iso-639
-Requires:       iso3166
-Requires:       python-pycryptodome
+Requires:       python3-iso-639
+Requires:       python3-iso3166
+Requires:       python3-pycryptodome
 Requires:       python-requests >= 1.0
+Requires:       python3-pysocks
+Requires:       python3-websocket-client
 
 Requires: mpv
 Suggests: vlc
@@ -51,22 +53,20 @@ Streamlink is a fork of the livestreamer project.
 
 %build
 
-python setup.py build
+%py3_build
 
 %install
 
-python setup.py install \
+%py3_install
 
-  --root=%{buildroot} \
-  --prefix=%{_prefix}
 
-find %{buildroot}{%{python3_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
-    if [[ "$(head -c2 "$py"; echo)" == "#!" ]]; then
-        chmod a+x "$py"
-    else
-        chmod a-x "$py"
-    fi
-done
+#find %{buildroot}{%{python3_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
+#    if [[ "$(head -c2 "$py"; echo)" == "#!" ]]; then
+#        chmod a+x "$py"
+#    else
+#        chmod a-x "$py"
+#    fi
+#done
 
 %files
 %license LICENSE
