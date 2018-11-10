@@ -33,6 +33,8 @@ Requires:       python3-iso-639
 Requires:       python3-iso3166
 Requires:       python3-pycryptodome
 Requires:       python-requests >= 1.0
+Requires:       python3-pysocks
+Requires:       python3-websocket-client
 
 Requires: mpv
 Suggests: vlc
