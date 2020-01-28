@@ -17,8 +17,8 @@
 
 
 Name:           streamlink
-Version:	1.3.0
-Release:	2
+Version:	1.3.1
+Release:	1
 Summary:        Program to pipe streams from services into a video player
 License:        BSD-2-Clause
 Group:          Development/Languages/Python
