@@ -1,24 +1,6 @@
-#
-# spec file for package streamlink
-#
-# Copyright (c) 2018 SUSE LINUX GmbH, Nuernberg, Germany.
-#
-# All modifications and additions to the file contributed by third parties
-# remain the property of their copyright owners, unless otherwise agreed
-# upon. The license for this file, and modifications and additions to the
-# file, is the same license as for the pristine package itself (unless the
-# license for the pristine package is not an Open Source License, in which
-# case the license is the MIT License). An "Open Source License" is a
-# license that conforms to the Open Source Definition (Version 1.9)
-# published by the Open Source Initiative.
-
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
-#
-
-
 Name:           streamlink
-Version:	1.3.1
-Release:	1
+Version:        1.4.0
+Release:        1
 Summary:        Program to pipe streams from services into a video player
 License:        BSD-2-Clause
 Group:          Development/Languages/Python
@@ -53,14 +35,14 @@ Streamlink is a fork of the livestreamer project.
 
 %build
 
-%py3_build
+%py_build
 
 %install
 
-%py3_install
+%py_install
 
 
-#find %{buildroot}{%{python3_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
+#find %{buildroot}{%{python_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
 #    if [[ "$(head -c2 "$py"; echo)" == "#!" ]]; then
 #        chmod a+x "$py"
 #    else
@@ -72,4 +54,4 @@ Streamlink is a fork of the livestreamer project.
 %license LICENSE
 %doc AUTHORS CHANGELOG.md MANIFEST.in README.md
 %{_bindir}/%{name}
-%{python3_sitelib}/%{name}*/
+%{python_sitelib}/%{name}*/
