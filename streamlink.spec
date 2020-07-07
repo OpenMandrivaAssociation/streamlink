@@ -1,6 +1,6 @@
 Name:           streamlink
-Version:        1.4.1
-Release:        2
+Version:        1.5.0
+Release:        1
 Summary:        Program to pipe streams from services into a video player
 License:        BSD-2-Clause
 Group:          Development/Languages/Python
@@ -19,8 +19,8 @@ Requires:       python3-pysocks
 Requires:       python-websocket-client
 
 Requires: mpv
-Suggests: vlc
-Suggests: mplayer
+Recommends: vlc
+Recommends: mplayer
 
 %description
 Streamlink is a CLI utility that pipes flash videos
