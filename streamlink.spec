@@ -55,3 +55,4 @@ Streamlink is a fork of the livestreamer project.
 %doc AUTHORS CHANGELOG.md MANIFEST.in README.md
 %{_bindir}/%{name}
 %{python_sitelib}/%{name}*/
+%{_mandir}/man1/streamlink.1.*
