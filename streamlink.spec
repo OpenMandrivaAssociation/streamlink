@@ -1,5 +1,5 @@
 Name:           streamlink
-Version:        2.3.0
+Version:        3.0.2
 Release:        1
 Summary:        Program to pipe streams from services into a video player
 License:        BSD-2-Clause
