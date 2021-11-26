@@ -17,6 +17,7 @@ Requires:       python-pycryptodome
 Requires:       python-requests >= 1.0
 Requires:       python3-pysocks
 Requires:       python-websocket-client
+Requires:       python3dist(pycountry)
 
 Requires: mpv
 Recommends: vlc
