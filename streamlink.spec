@@ -11,6 +11,7 @@ BuildArch:      noarch
 BuildRequires:  python-sphinx
 BuildRequires:  python-devel >= 3.4
 BuildRequires:  python-setuptools
+BuildRequires:  python3dist(versioningit)
 Requires:       python-iso-639
 Requires:       python-iso3166
 Requires:       python-pycryptodome
