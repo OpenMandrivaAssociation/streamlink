@@ -1,6 +1,6 @@
 Name:           streamlink
-Version:        5.0.1
-Release:        2
+Version:        5.1.0
+Release:        1
 Summary:        Program to pipe streams from services into a video player
 License:        BSD-2-Clause
 Group:          Development/Languages/Python
@@ -12,6 +12,8 @@ BuildRequires:  python-sphinx
 BuildRequires:  python-devel >= 3.4
 BuildRequires:  python-setuptools
 BuildRequires:  python3dist(versioningit)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(wheel)
 Requires:       python-iso-639
 Requires:       python-iso3166
 Requires:       python-pycryptodome
