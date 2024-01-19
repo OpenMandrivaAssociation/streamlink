@@ -21,6 +21,8 @@ Requires:       python-requests >= 1.0
 Requires:       python3-pysocks
 Requires:       python-websocket-client
 Requires:       python3dist(pycountry)
+Requires:       python3dist(trio)
+Requires:       python3dist(trio-websocket)
 
 Requires: mpv
 Recommends: vlc
@@ -38,13 +40,10 @@ Streamlink is a fork of the livestreamer project.
 %setup -q
 
 %build
-
 %py_build
 
 %install
-
 %py_install
-
 
 #find %{buildroot}{%{python_sitelib},%{python_sitelib}} -type f -name '*.py' | while read py; do
 #    if [[ "$(head -c2 "$py"; echo)" == "#!" ]]; then
