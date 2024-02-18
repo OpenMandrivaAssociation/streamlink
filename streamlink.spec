@@ -1,10 +1,10 @@
 Name:           streamlink
-Version:        6.6.0
+Version:        6.6.1
 Release:        1
 Summary:        Program to pipe streams from services into a video player
 License:        BSD-2-Clause
 Group:          Development/Languages/Python
-Url:            http://streamlink.github.io/
+Url:            https://streamlink.github.io/
 Source:         https://github.com/streamlink/streamlink/releases/download/%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 
