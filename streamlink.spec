@@ -60,4 +60,5 @@ Streamlink is a fork of the livestreamer project.
 %{python_sitelib}/%{name}*/
 %{_datadir}/bash-completion/completions/streamlink
 %{_datadir}/zsh/site-functions/_streamlink
+%{_datadir}/fish/vendor_completions.d/streamlink.fish
 %{_mandir}/man1/streamlink.1.*
