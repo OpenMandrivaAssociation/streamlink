@@ -1,6 +1,6 @@
 Name:           streamlink
 Version:        8.5.0
-Release:        1
+Release:        2
 Summary:        Program to pipe streams from services into a video player
 License:        BSD-2-Clause
 Group:          Development/Languages/Python
@@ -8,21 +8,21 @@ Url:            https://streamlink.github.io/
 Source:         https://github.com/streamlink/streamlink/releases/download/%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-devel >= 3.4
-BuildRequires:  python-setuptools
-BuildRequires:  python3dist(versioningit)
-BuildRequires:  python3dist(pip)
-BuildRequires:  python3dist(wheel)
+BuildRequires:  python%{pyver}dist(sphinx)
+BuildRequires:  pkgconfig(python3)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(versioningit)
+BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(wheel)
 Requires:       python-iso-639
 Requires:       python-iso3166
 Requires:       python-pycryptodome
 Requires:       python-requests >= 1.0
-Requires:       python3-pysocks
+Requires:       python%{pyver}dist(pysocks)
 Requires:       python-websocket-client
-Requires:       python3dist(pycountry)
-Requires:       python3dist(trio)
-Requires:       python3dist(trio-websocket)
+Requires:       python%{pyver}dist(pycountry)
+Requires:       python%{pyver}dist(trio)
+Requires:       python%{pyver}dist(trio-websocket)
 
 Requires: mpv
 Recommends: vlc
